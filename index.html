@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كناش الحوت</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6f7;--card:#fff;--ink:#0e2a33;--mut:#5d747a;--line:#dbe5e7;--navy:#0b2e3a;--teal:#0f8b8d;--org:#f26a21;--red:#b3201f;--ok:#2b8a3e;--yel:#e8a900;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1a1f;--card:#12272d;--ink:#e6f1f3;--mut:#8fa9ae;--line:#22404a;--navy:#071f27}}
+:root[data-theme="dark"]{--bg:#0a1a1f;--card:#12272d;--ink:#e6f1f3;--mut:#8fa9ae;--line:#22404a;--navy:#071f27}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);min-height:100vh;padding-bottom:84px}
+header{background:var(--navy);color:#fff;padding:14px 18px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:1.15rem;cursor:pointer}header small{opacity:.7;font-size:.75rem}
+.wrap{max-width:900px;margin:0 auto;padding:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(3,1fr)}}
+.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;border-top:3px solid var(--teal)}
+.st small{color:var(--mut);font-size:.76rem;display:block;margin-bottom:2px}.st b{font-size:1.2rem}
+.st.o{border-top-color:var(--org)}.st.r{border-top-color:var(--red)}.st.r b{color:var(--red)}.st.g{border-top-color:var(--ok)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.card h2{font-size:1rem;margin-bottom:12px;color:var(--teal)}
+.fg{margin-bottom:12px}.fg label{display:block;margin-bottom:4px;font-weight:600;font-size:.88rem}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:1rem;background:var(--bg);color:var(--ink)}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--org);outline-offset:1px}
+.btn{background:var(--org);color:#fff;border:none;padding:13px;border-radius:8px;width:100%;font-size:1rem;font-weight:700;cursor:pointer}
+.btn.t{background:var(--teal)}
+.tot{background:var(--navy);color:#fff;border-radius:10px;padding:14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.tot b{font-size:1.6rem}.hint{font-size:.84rem;color:var(--mut);margin:-6px 0 12px}
+.warn{background:#fff3cd;color:#664d03;border-radius:8px;padding:10px;margin-bottom:12px;font-size:.86rem;display:none}
+.sm{padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);cursor:pointer;font-size:.8rem;text-decoration:none;display:inline-block}
+.sm.wa{background:#25d366;border-color:#25d366;color:#fff}
+.bd{padding:2px 9px;border-radius:12px;font-size:.74rem;color:#fff;background:var(--mut);display:inline-block}
+.bd.ok{background:var(--ok)}.bd.y{background:var(--yel);color:#000}.bd.r{background:var(--red)}
+.bar{height:10px;background:var(--line);border-radius:5px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--teal)}
+.truck .hd{display:flex;justify-content:space-between;align-items:center}
+.truck .n{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center;font-size:.8rem;color:var(--mut)}.truck .n b{display:block;font-size:1rem;color:var(--ink)}
+.li{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center;font-size:.9rem}
+.li small{display:block;color:var(--mut)}.li.late b.m{color:var(--red)}
+.tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:9px;text-align:right;border-bottom:1px solid var(--line);font-size:.86rem}th{background:var(--navy);color:#fff}
+tr.late td{background:var(--red);color:#fff;font-weight:700}tr.late .sm{background:#fff;color:var(--red)}
+.fl{display:flex;gap:8px;margin-bottom:10px}.fl button{flex:1;padding:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}.fl button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.emp{text-align:center;color:var(--mut);padding:20px}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--navy);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:10}
+nav button{flex:1;background:none;border:none;color:#9fb8bf;font-size:.7rem;padding:6px 2px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button span{font-size:1.35rem}nav button.on{color:#fff}nav button.on span{transform:translateY(-2px)}
+nav button.sell span{background:var(--org);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;margin-top:-18px;color:#fff;font-size:1.5rem}
+.hb{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:0 8px}
+aside{position:fixed;top:0;right:-310px;width:290px;height:100%;background:var(--navy);color:#fff;padding:calc(20px + env(safe-area-inset-top,0px)) 18px 20px;z-index:40;transition:right .25s}
+aside.active{right:0}aside h2{color:#ffd9c2;margin-bottom:16px;font-size:1.05rem}aside .x{background:none;border:none;color:#fff;font-size:1.6rem;float:left;cursor:pointer}
+aside a{color:#fff;text-decoration:none;display:block;padding:11px 8px;border-radius:8px}aside a:hover{background:rgba(255,255,255,.12)}
+aside label{font-size:.88rem;display:block;margin-bottom:5px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:35;display:none}.ov.show{display:block}
+.hd2{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.big{font-size:1.45rem;display:block}.rd{color:var(--red)}
+.en{padding:10px;border:1px solid var(--line);border-radius:8px;margin-top:8px}.en.late{border-color:var(--red);background:rgba(179,32,31,.08)}
+.en small{display:block;color:var(--mut);font-size:.8rem;margin-top:2px}
+.sm.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.toast{position:fixed;bottom:calc(90px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}.toast.show{opacity:1}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+*{font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif}
+tr.late td{background:none;color:inherit;font-weight:500}tr.late .sm{background:var(--card);color:var(--ink)}
+.li.late b.m,.rd{color:inherit}.en.late{border-color:var(--line);background:none}
+table .bd{background:none!important;color:var(--mut)!important;border:1px solid var(--line)}table .bd.ok{color:var(--ok)!important}
+.board{margin-top:4px}.bh,.br,.bt{display:grid;grid-template-columns:1fr 92px 112px;gap:8px;padding:14px 4px;align-items:baseline}
+.bh{color:var(--mut);font-size:.78rem;border-bottom:1.5px solid var(--ink);padding-bottom:8px}
+.br{border-bottom:1px solid var(--line);cursor:pointer}.br:hover{background:var(--bg)}
+.nm{font-size:1.05rem;font-weight:700}.nm small{display:block;color:var(--mut);font-weight:400;font-size:.76rem;margin-top:2px}
+.dt{color:var(--mut);font-size:.84rem}.am{text-align:left;font-variant-numeric:tabular-nums;font-weight:700;font-size:1.05rem}
+.bt{border-top:2px solid var(--ink);font-weight:700;font-size:1.05rem}
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:50;display:none;align-items:flex-end}.sheet.show{display:flex}
+.sheet>div{background:var(--card);width:100%;max-width:900px;margin:0 auto;max-height:90%;overflow:auto;border-radius:18px 18px 0 0;padding:16px 16px calc(18px + env(safe-area-inset-bottom,0px))}
+.sh{font-size:.95rem;color:var(--teal);margin:18px 0 6px}
+</style>
+</head>
+<body>
+<header><button class="hb" onclick="toggleSb(true)" aria-label="القائمة">☰</button><div><h1 id="biz" title="اضغط لتغيير الاسم">🐟 كناش الحوت</h1><small>مبيعات · سيارات · ديون</small></div><small id="dtxt"></small></header>
+<main class="wrap">
+
+<section id="home" class="sec">
+  <div class="fg"><input type="date" id="vd" aria-label="اختر اليوم"></div>
+  <div class="grid">
+    <div class="st o"><small>صناديق بيعت</small><b id="a1">0</b></div>
+    <div class="st"><small>مبيعات اليوم</small><b id="a2">0</b></div>
+    <div class="st g"><small>فلوس شديتي (مقبوض)</small><b id="a3">0</b></div>
+    <div class="st r"><small>دين بيعات اليوم</small><b id="a4">0</b></div>
+    <div class="st"><small>صناديق باقية في المخزون</small><b id="a5">0</b></div>
+    <div class="st g"><small>الربح التقريبي</small><b id="a6">—</b></div>
+  </div>
+  <div class="st r" style="margin-bottom:12px"><small>مجموع الديون عند الزبناء (كل الأيام)</small><b id="a7">0</b></div>
+  <div class="card"><h2>بيعات هاد النهار</h2><div id="dlist"></div>
+    <div style="margin-top:10px"><a class="sm wa" id="rep" target="_blank" rel="noopener">إرسال تقرير النهار عبر واتساب</a></div></div>
+  <div class="card"><h2>نسخة احتياطية</h2><p class="hint" style="margin-top:0">البيانات في هاد الهاتف فقط. انسخها وخبيها، أو استرجعها فهاتف آخر.</p>
+    <div class="r2"><button class="btn t" onclick="backup()">نسخ البيانات</button><button class="btn t" onclick="restore()">استرجاع</button></div><button class="sm" style="margin-top:10px" onclick="demo()">تحميل بيانات تجريبية للعرض</button></div>
+</section>
+
+<section id="trucks" class="sec" style="display:none">
+  <div class="card"><h2>تسجيل سيارة وصلات</h2>
+    <form id="tf">
+      <div class="r2"><div class="fg"><label>اسم السيارة / صاحبها</label><input id="tn" required placeholder="مثال: سيارة براهيم"></div>
+      <div class="fg"><label>📍 المدينة اللي جات منها</label><input id="tcity" list="cities" placeholder="مثال: أكادير"></div></div>
+      <div class="r2"><div class="fg"><label>نوع الحوت</label><input id="tfish" list="fishes" required placeholder="سردين"></div>
+      <div class="fg"><label>عدد الصناديق</label><input id="tb" type="number" min="1" step="any" inputmode="decimal" required></div></div>
+      <div class="r2"><div class="fg"><label>ثمن الصندوق عليك (اختياري)</label><input id="tc" type="number" min="0" step="any" inputmode="decimal" placeholder="لحساب الربح"></div>
+      <div class="fg"><label>التاريخ</label><input id="td" type="date" required></div></div>
+      <button class="btn">حفظ السيارة</button>
+    </form></div>
+  <div id="tlist"></div>
+</section>
+
+<section id="sales" class="sec" style="display:none">
+  <div class="card"><h2>بيعة جديدة</h2>
+  <form id="sf">
+    <div class="fg"><label>من أي سيارة؟</label><select id="st"></select></div>
+    <div class="hint" id="sth"></div>
+    <div class="fg"><label>نوع السمك</label><input id="sfish" list="fishes" required placeholder="مثال: سردين"></div>
+    <div class="r2"><div class="fg"><label>اسم الزبون</label><input id="cn" list="clients" required autocomplete="off" placeholder="محمد المديقي"><datalist id="clients"></datalist></div>
+    <div class="fg"><label>الهاتف</label><input id="ph" type="tel" inputmode="tel" placeholder="06XXXXXXXX"></div></div>
+    <div class="warn" id="hold"></div>
+    <div class="r2"><div class="fg"><label>عدد الصناديق</label><input id="bx" type="number" min="0" step="any" inputmode="decimal" required></div>
+    <div class="fg"><label>ثمن الصندوق</label><input id="pr" type="number" min="0" step="any" inputmode="decimal" required></div></div>
+    <div class="tot"><span>الإجمالي</span><b id="tv">0 د.م</b></div>
+    <div class="r2"><div class="fg"><label>شحال خلص دابا؟</label><input id="pn" type="number" min="0" step="any" inputmode="decimal" value="0"></div>
+    <div class="fg"><label>التاريخ</label><input id="sd" type="date" required></div></div>
+    <div class="hint" id="rv"></div>
+    <div class="r2"><button type="button" class="sm" onclick="payAll()" style="padding:12px">خلص كلشي</button><button class="btn">حفظ البيعة</button></div>
+  </form></div>
+</section>
+
+<section id="debts" class="sec card" style="display:none">
+  <h2>سجل الديون والمدفوعات (أحمر = 10 أيام أو أكثر)</h2>
+  <div class="fl"><button class="on" data-f="all">الكل</button><button data-f="unpaid">ديون</button><button data-f="paid">مدفوع</button></div>
+  <div class="fg"><input id="q" placeholder="🔍 ابحث باسم الزبون"></div>
+  <div class="tbl"><table><thead><tr><th>الزبون</th><th>السيارة</th><th>السلعة</th><th>الإجمالي</th><th>المدفوع</th><th>المتبقي</th><th>التاريخ</th><th>الأيام</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="tb2"></tbody></table></div>
+</section>
+
+<section id="ledger" class="sec" style="display:none">
+  <div class="card"><h2>🔍 كشف حساب زبون</h2>
+    <div class="fg"><input id="lq" list="clients" placeholder="اكتب اسم الزبون" autocomplete="off"></div>
+    <label class="hint" style="display:block;margin:0"><input type="checkbox" id="lp" style="width:auto;margin-left:6px">أظهر حتى العمليات المدفوعة</label></div>
+  <div id="lres"></div>
+</section>
+<section id="custs" class="sec card" style="display:none"><h2>قائمة المدينين</h2><div id="clist"></div></section>
+<datalist id="fishes"><option>سردين</option><option>شرن</option><option>ميرلان</option><option>سيبيا</option><option>كلمار</option><option>كروفيت</option><option>دوراد</option><option>مرجان</option></datalist>
+</main>
+
+<div class="sheet" id="sheet" onclick="if(event.target===this)closeSheet()"><div id="shc"></div></div>
+<div class="ov" id="ov" onclick="toggleSb(false)"></div>
+<aside id="sb"><button class="x" onclick="toggleSb(false)" aria-label="إغلاق">×</button><h2>القائمة</h2>
+  <div class="fg"><label>🔍 قلب على زبون</label><input id="sq" list="clients" placeholder="اسم الزبون" autocomplete="off" onkeydown="if(event.key==='Enter')openSearch()"><button class="btn" style="margin-top:8px" onclick="openSearch()">بحث</button></div>
+  <a href="#" onclick="go('home');return false">📊 اليوم</a><a href="#" onclick="go('trucks');return false">🚚 السيارات</a><a href="#" onclick="go('sales');return false">➕ بيعة جديدة</a><a href="#" onclick="go('debts');return false">📒 سجل الديون</a><a href="#" onclick="go('custs');return false">👥 الزبناء</a>
+</aside>
+<datalist id="cities"></datalist>
+<nav>
+  <button data-t="home" class="on"><span>📊</span>اليوم</button>
+  <button data-t="trucks"><span>🚚</span>السيارات</button>
+  <button data-t="sales" class="sell"><span>＋</span>بيع</button>
+  <button data-t="debts"><span>📒</span>الديون</button>
+  <button data-t="custs"><span>👥</span>الزبناء</button>
+</nav>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const sum=(a,f)=>a.reduce((x,y)=>x+f(y),0);
+function today(){const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10)}
+function days(s){return Math.max(0,Math.round((new Date(today()+'T00:00:00')-new Date(s+'T00:00:00'))/864e5))}
+const money=n=>(Math.round(n*100)/100).toLocaleString('en-US')+' د.م';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let db={trucks:[],sales:[]},filter='all',vd=today();
+try{const r=localStorage.getItem('fishPro');if(r)db=JSON.parse(r);else{const o=JSON.parse(localStorage.getItem('fishSales')||'[]');
+db.sales=o.map(i=>{const total=i.total??i.amount,paid=i.paid??(i.status==='paid'?total:0);return{id:i.id,truckId:null,fish:i.fish,client:i.client,phone:i.phone||'',boxes:i.boxes||1,price:i.price??total,total,date:i.date,pays:paid>0?[{d:i.date,a:paid}]:[]}})}}catch(e){}
+function save(){try{localStorage.setItem('fishPro',JSON.stringify(db))}catch(e){}}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
+const truck=id=>db.trucks.find(t=>t.id===id);
+const soldOf=t=>sum(db.sales.filter(s=>s.truckId===t.id),s=>s.boxes);
+const left=t=>t.boxes-soldOf(t);
+const paid=s=>sum(s.pays,p=>p.a), rem=s=>Math.max(0,s.total-paid(s));
+const profit=s=>{const t=truck(s.truckId);return t&&t.cost>0?(s.price-t.cost)*s.boxes:0};
+function wa(phone,text){let p=(phone||'').replace(/\D/g,'');if(p[0]==='0')p='212'+p.slice(1);return 'https://wa.me/'+p+'?text='+encodeURIComponent(text)}
+
+try{const n=localStorage.getItem('fishBiz');if(n)$('biz').textContent='🐟 '+n}catch(e){}
+$('biz').onclick=()=>{const n=prompt('اسم المحل / الشركة:');if(n){$('biz').textContent='🐟 '+n;try{localStorage.setItem('fishBiz',n)}catch(e){}}};
+$('dtxt').textContent=new Date().toLocaleDateString('ar-MA',{weekday:'long',day:'numeric',month:'long'});
+
+function show(t){document.querySelectorAll('.sec').forEach(e=>e.style.display=e.id===t?'block':'none');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));render();scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.t));
+['vd','td','sd'].forEach(k=>$(k).value=today());
+$('vd').onchange=()=>{vd=$('vd').value||today();renderHome()};
+
+/* السيارات */
+$('tf').onsubmit=e=>{e.preventDefault();db.trucks.push({id:Date.now(),name:$('tn').value.trim(),city:$('tcity').value.trim(),fish:$('tfish').value.trim(),boxes:parseFloat($('tb').value),cost:parseFloat($('tc').value)||0,date:$('td').value});save();e.target.reset();$('td').value=today();toast('تسجلات السيارة');render()};
+function delTruck(id){if(db.sales.some(s=>s.truckId===id))return alert('هاد السيارة فيها بيعات، ما يمكنش تمسحها.');if(confirm('مسح السيارة؟')){db.trucks=db.trucks.filter(t=>t.id!==id);save();render()}}
+function citySum(){const bc={};db.trucks.forEach(t=>{const k=t.city||'بلا مدينة',c=bc[k]||(bc[k]={n:0,b:0});c.n++;c.b+=t.boxes});
+ return`<div class="card"><h2>📍 شحال جابو ليك من كل مدينة</h2>`+Object.entries(bc).sort((a,b)=>b[1].b-a[1].b).map(([k,v])=>`<div class="li"><div><b>${esc(k)}</b><small>${v.n} ${v.n>2?'مرات':'مرة'} جات</small></div><b>${v.b} صندوق</b></div>`).join('')+'</div>'}
+function renderTrucks(){
+  $('cities').innerHTML=[...new Set(db.trucks.map(t=>t.city).filter(Boolean))].map(c=>`<option value="${esc(c)}">`).join('');
+  $('tlist').innerHTML=(db.trucks.length?citySum():'')+(db.trucks.length?db.trucks.slice().reverse().map(t=>{
+    const S=db.sales.filter(s=>s.truckId===t.id),so=soldOf(t),l=t.boxes-so,bd=l<=0?'<span class="bd r">خلصات</span>':l<=3?'<span class="bd y">قاربت تخلص</span>':'<span class="bd ok">متوفرة</span>';
+    const pf=sum(S,profit);
+    return`<div class="card truck"><div class="hd"><div><b>🚚 ${esc(t.name)}</b><div class="hint" style="margin:2px 0 0">${esc(t.fish)} · ${t.city?'📍 '+esc(t.city)+' · ':''}وصلات ${t.date}</div></div>${bd}</div>
+    <div class="bar"><i style="width:${Math.min(100,so/t.boxes*100)}%"></i></div>
+    <div class="n"><div><b>${t.boxes}</b>جابت</div><div><b>${so}</b>بيعت</div><div><b>${l}</b>باقية</div></div>
+    <div class="n" style="margin-top:8px"><div><b>${money(sum(S,s=>s.total))}</b>مبيعات</div><div><b>${money(sum(S,paid))}</b>مقبوض</div><div><b>${t.cost>0?money(pf):'—'}</b>ربح</div></div>
+    <div style="margin-top:10px"><button class="sm" onclick="delTruck(${t.id})">مسح</button></div></div>`}).join(''):'<div class="card emp">ما كاين حتى سيارة. سجل أول سيارة وصلات باش تبدا البيع.</div>');
+}
+
+/* البيع */
+function fillTrucks(){const prev=$('st').value,o=db.trucks.filter(t=>left(t)>0);
+ $('st').innerHTML='<option value="">بدون سيارة (سلعة أخرى)</option>'+o.map(t=>`<option value="${t.id}">${esc(t.name)}${t.city?' ('+esc(t.city)+')':''} — ${esc(t.fish)} (باقي ${left(t)})</option>`).join('');
+ $('st').value=o.some(t=>String(t.id)===prev)?prev:(o.length?String(o[0].id):'');stHint()}
+function stHint(){const t=truck(+$('st').value);$('sth').textContent=t?`الباقي من هاد السيارة: ${left(t)} صندوق`:'بدون سيارة: ما غاديش يتنقص من أي مخزون.
